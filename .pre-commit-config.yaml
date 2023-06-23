@@ -40,7 +40,7 @@ repos:
           - "#"
       - id: insert-license
         name: Insert license headers (XML-style comments)
-        files: '\.(?:html|md|xml|aird|capella|afm|project)$'
+        files: '\.(?:html|md|xml)$'
         exclude: '(?:^|/)\..+'
         args:
           - --detect-license-in-X-top-lines=15
