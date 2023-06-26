@@ -3,7 +3,7 @@
 
 name: generate model badge
 
-on: [ push, pull_request ]
+on: push
 
 jobs:
   generate-model-badge:
