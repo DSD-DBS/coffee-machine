@@ -20,7 +20,7 @@ jobs:
       - name: Generate model badge
         run: |
           git fetch
-          git reset --hard origin/$COMMIT_BRANCH
+          git reset
           pip install "git+https://github.com/DSD-DBS/py-capellambse.git@$CAPELLAMBSE_REVISION"
           python <<EOF
           import os
