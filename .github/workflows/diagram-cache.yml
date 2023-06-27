@@ -1,0 +1,48 @@
+# Copyright DB Netz AG and contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: update_capella_diagram_cache
+
+on: push
+
+jobs:
+  update_capella_diagram_cache:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+        - name: Set up Python 3.11
+          uses: actions/setup-python@v3
+          with:
+            python-version: 3.11
+        - name: Install capellambse
+          run:
+            pip install "capellambse[cli]@git+https://github.com/DSD-DBS/py-capellambse.git@$CAPELLAMBSE_REVISION"
+        - name: Create diagram cache
+          run: >-
+            python -m capellambse.diagram_cache
+            --model ${{ env.ENTRYPOINT }}
+            --output ./diagram_cache
+            --index
+            --docker ghcr.io/dsd-dbs/capella-dockerimages/capella/base:{VERSION}-${{ env.CAPELLA_DOCKER_IMAGES_DROPINS }}-dropins-${{ env.CAPELLA_DOCKER_IMAGES_REVISION }}
+        - name: Archive diagram cache
+          uses: actions/upload-artifact@v3
+          with:
+            name: diagram_cache
+            path: diagram_cache
+      env:
+        # Relative entrypoint to .aird file inside repository (starting from the root of the repository).
+        # Example: test/test.aird
+        ENTRYPOINT: "coffee-machine-demo.aird"
+
+        CAPELLAMBSE_REVISION: "master"
+
+        CAPELLA_DOCKER_IMAGES_REVISION: main
+
+        # Please have a look in the documentation of capella-dockerimages
+        # https://dsd-dbs.github.io/capella-dockerimages/capella/introduction/#supported-dropins
+        CAPELLA_DOCKER_IMAGES_DROPINS: selected
+
+        PUSH_DIAGRAM_CACHE: 1
+
+        COMMIT_MSG: "docs: Update diagram cache"
