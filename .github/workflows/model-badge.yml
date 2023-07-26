@@ -11,38 +11,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.11
       - name: Generate model badge
-        run: |
-          git fetch
-          git reset
-          pip install "git+https://github.com/DSD-DBS/py-capellambse.git@$CAPELLAMBSE_REVISION"
-          python <<EOF
-          import os
-          import pathlib
-          import capellambse
-          model = capellambse.MelodyModel("./coffee-machine-demo.aird")
-          pathlib.Path(os.environ["OUTPUT_FILE"]).write_text(model.description_badge)
-          EOF
-      - name: Push model badge to repository
-        run: |
-          git add "$OUTPUT_FILE"
-          if git diff --cached --exit-code &> /dev/null || [[ "$PUSH_MODEL_BADGE" == 0 ]]; then exit 0; fi
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "$COMMIT_MSG"
-          git push -o ci.skip origin "HEAD:$COMMIT_BRANCH"
-      - name: Archive model badge in artifacts
-        uses: actions/upload-artifact@v3
+        uses: DSD-DBS/py-capellambse/ci-templates/github/model-complexity-badge@master
         with:
-          name: model-complexity-badge
-          path: ${{ env.OUTPUT_FILE }}
+          entrypoint: ${{ env.ENTRYPOINT }}
     env:
-      OUTPUT_FILE: model-complexity-badge.svg
-      COMMIT_MSG: "docs: Update model complexity badge"
-      CAPELLAMBSE_REVISION: v0.5.28
-      COMMIT_BRANCH: ${{ github.ref_name }}
-      PUSH_MODEL_BADGE: 1
+      ENTRYPOINT: "./coffee-machine-demo.aird"
