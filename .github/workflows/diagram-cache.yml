@@ -25,6 +25,17 @@ jobs:
             --output ./diagram_cache
             --index
             --docker ghcr.io/dsd-dbs/capella-dockerimages/capella/base:{VERSION}-${{ env.CAPELLA_DOCKER_IMAGES_DROPINS }}-dropins-${{ env.CAPELLA_DOCKER_IMAGES_REVISION }}
+        - name: Push diagram cache to orphan branch
+          run: |
+            DERIVED_BRANCH_NAME="$(echo diagram-cache/$COMMIT_BRANCH)"
+            git switch "$DERIVED_BRANCH_NAME" || git switch --orphan "$DERIVED_BRANCH_NAME"
+            git reset
+            git add diagram_cache
+            if git diff --cached --exit-code &> /dev/null || [[ "$PUSH_DIAGRAM_CACHE" == 0 ]]; then exit 0; fi
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "capellambse[bot]"
+            git commit -m "$COMMIT_MSG"
+            git push -o ci.skip --set-upstream origin $DERIVED_BRANCH_NAME --force
         - name: Archive diagram cache
           uses: actions/upload-artifact@v3
           with:
@@ -46,3 +57,5 @@ jobs:
         PUSH_DIAGRAM_CACHE: 1
 
         COMMIT_MSG: "docs: Update diagram cache"
+
+        COMMIT_BRANCH: ${{ github.ref_name }}
