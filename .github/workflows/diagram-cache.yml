@@ -11,51 +11,11 @@ jobs:
       steps:
         - name: Checkout code
           uses: actions/checkout@v3
-        - name: Set up Python 3.11
-          uses: actions/setup-python@v3
+        - name: Generate and upload diagram cache
+          uses: DSD-DBS/capella-dockerimages/ci-templates/github/diagram-cache@main
           with:
-            python-version: 3.11
-        - name: Install capellambse
-          run:
-            pip install "capellambse[cli]@git+https://github.com/DSD-DBS/py-capellambse.git@$CAPELLAMBSE_REVISION"
-        - name: Create diagram cache
-          run: >-
-            python -m capellambse.diagram_cache
-            --model ${{ env.ENTRYPOINT }}
-            --output ./diagram_cache
-            --index
-            --docker ghcr.io/dsd-dbs/capella-dockerimages/capella/base:{VERSION}-${{ env.CAPELLA_DOCKER_IMAGES_DROPINS }}-dropins-${{ env.CAPELLA_DOCKER_IMAGES_REVISION }}
-        - name: Push diagram cache to orphan branch
-          run: |
-            DERIVED_BRANCH_NAME="$(echo diagram-cache/$COMMIT_BRANCH)"
-            git switch "$DERIVED_BRANCH_NAME" || git switch --orphan "$DERIVED_BRANCH_NAME"
-            git reset
-            git add diagram_cache
-            if git diff --cached --exit-code &> /dev/null || [[ "$PUSH_DIAGRAM_CACHE" == 0 ]]; then exit 0; fi
-            git config --local user.email "github-actions[bot]@users.noreply.github.com"
-            git config --local user.name "capellambse[bot]"
-            git commit -m "$COMMIT_MSG"
-            git push -o ci.skip --set-upstream origin $DERIVED_BRANCH_NAME --force
-        - name: Archive diagram cache
-          uses: actions/upload-artifact@v3
-          with:
-            name: diagram_cache
-            path: diagram_cache
+            entry_point: ${{ env.ENTRYPOINT }}
       env:
         # Relative entrypoint to .aird file inside repository (starting from the root of the repository).
         # Example: test/test.aird
         ENTRYPOINT: "coffee-machine-demo.aird"
-
-        CAPELLAMBSE_REVISION: "master"
-
-        CAPELLA_DOCKER_IMAGES_REVISION: main
-
-        # Please have a look in the documentation of capella-dockerimages
-        # https://dsd-dbs.github.io/capella-dockerimages/capella/introduction/#supported-dropins
-        CAPELLA_DOCKER_IMAGES_DROPINS: selected
-
-        PUSH_DIAGRAM_CACHE: 1
-
-        COMMIT_MSG: "docs: Update diagram cache"
-
-        COMMIT_BRANCH: ${{ github.ref_name }}
