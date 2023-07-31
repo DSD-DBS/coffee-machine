@@ -15,5 +15,6 @@ jobs:
         uses: DSD-DBS/py-capellambse/ci-templates/github/model-complexity-badge@github-ci-template
         with:
           entry_point: ${{ env.ENTRYPOINT }}
+          push_model_badge: "false"
     env:
       ENTRYPOINT: "./coffee-machine-demo.aird"
