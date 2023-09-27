@@ -43,6 +43,9 @@
             name="FOP 2"/>
         <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort" id="c87688f6-adc7-45e2-b254-8f22e85fec4b"
             name="FOP 3"/>
+        <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+            id="b123f47c-6dd7-4c95-baca-242ed8bb0a4f" targetElement="org.polarsys.capella.core.data.oa:OperationalActivity index:/fragments/OA.capellafragment#0f0f97ea-d252-4211-9923-f0acbbd73d66"
+            sourceElement="#8b0d19df-7446-4c3a-98e7-4a739c974059"/>
       </ownedFunctions>
       <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
           id="f254a221-6364-4beb-92cc-e4f553715c3a" name="provide power">
@@ -82,7 +85,7 @@
             name="FOP 1"/>
       </ownedFunctions>
       <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
-          id="fb72c087-044c-45c6-b228-23874ddf2b40" targetElement="org.polarsys.capella.core.data.oa:OperationalActivity OA.capellafragment#d90e3f89-2407-417a-b01f-2114b32ff329"
+          id="fb72c087-044c-45c6-b228-23874ddf2b40" targetElement="org.polarsys.capella.core.data.oa:OperationalActivity index:/fragments/OA.capellafragment#d90e3f89-2407-417a-b01f-2114b32ff329"
           sourceElement="#eff8d0b0-84df-431e-aec8-66150a0b1365"/>
       <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
           id="51c0ac45-2206-4688-b4c5-7d3003c6c705" name="coffee request" target="#9a409efc-75bc-44b5-8888-8abefebc69d0"
@@ -755,6 +758,6 @@
   <ownedMissionPkg xsi:type="org.polarsys.capella.core.data.ctx:MissionPkg" id="a9830339-2dc5-4e8e-818d-4d5c46eaaa0d"
       name="Missions"/>
   <ownedOperationalAnalysisRealizations xsi:type="org.polarsys.capella.core.data.ctx:OperationalAnalysisRealization"
-      id="f4b2e51a-862c-4658-881b-e62b0db4740b" targetElement="org.polarsys.capella.core.data.oa:OperationalAnalysis OA.capellafragment#5792e402-6a42-4c6e-af3a-86a05a16d64a"
+      id="f4b2e51a-862c-4658-881b-e62b0db4740b" targetElement="org.polarsys.capella.core.data.oa:OperationalAnalysis index:/fragments/OA.capellafragment#5792e402-6a42-4c6e-af3a-86a05a16d64a"
       sourceElement="#fe55c3c2-28d3-4d80-b54d-aae12cdc6bc6"/>
 </org.polarsys.capella.core.data.ctx:SystemAnalysis>
