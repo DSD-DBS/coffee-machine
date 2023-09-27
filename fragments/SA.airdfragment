@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CapellaRequirements="http://www.polarsys.org/capella/requirements" xmlns:Requirements="http://www.polarsys.org/kitalpha/requirements" xmlns:concern="http://www.eclipse.org/sirius/diagram/description/concern/1.1.0" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/sequence/description/2.0.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:org.polarsys.capella.core.data.capellacommon="http://www.polarsys.org/capella/core/common/6.0.0" xmlns:org.polarsys.capella.core.data.capellacore="http://www.polarsys.org/capella/core/core/6.0.0" xmlns:org.polarsys.capella.core.data.cs="http://www.polarsys.org/capella/core/cs/6.0.0" xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/6.0.0" xmlns:org.polarsys.capella.core.data.fa="http://www.polarsys.org/capella/core/fa/6.0.0" xmlns:org.polarsys.capella.core.data.information="http://www.polarsys.org/capella/core/information/6.0.0" xmlns:org.polarsys.capella.core.data.interaction="http://www.polarsys.org/capella/core/interaction/6.0.0" xmlns:sequence="http://www.eclipse.org/sirius/diagram/sequence/2.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/diagram/description/concern/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/concern http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/sequence/description/2.0.0 http://www.eclipse.org/sirius/diagram/sequence/2.0.0#//description http://www.eclipse.org/sirius/diagram/description/filter/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/filter http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CapellaRequirements="http://www.polarsys.org/capella/requirements" xmlns:Requirements="http://www.polarsys.org/kitalpha/requirements" xmlns:concern="http://www.eclipse.org/sirius/diagram/description/concern/1.1.0" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/sequence/description/2.0.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:org.polarsys.capella.core.data.capellacommon="http://www.polarsys.org/capella/core/common/6.0.0" xmlns:org.polarsys.capella.core.data.capellacore="http://www.polarsys.org/capella/core/core/6.0.0" xmlns:org.polarsys.capella.core.data.cs="http://www.polarsys.org/capella/core/cs/6.0.0" xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/6.0.0" xmlns:org.polarsys.capella.core.data.fa="http://www.polarsys.org/capella/core/fa/6.0.0" xmlns:org.polarsys.capella.core.data.information="http://www.polarsys.org/capella/core/information/6.0.0" xmlns:org.polarsys.capella.core.data.interaction="http://www.polarsys.org/capella/core/interaction/6.0.0" xmlns:sequence="http://www.eclipse.org/sirius/diagram/sequence/2.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/diagram/description/concern/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/concern http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/sequence/description/2.0.0 http://www.eclipse.org/sirius/diagram/sequence/2.0.0#//description http://www.eclipse.org/sirius/diagram/description/filter/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/filter http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_OogbkF0cEe6xgMAh5rEJqw" selectedViews="_Ooz9kF0cEe6xgMAh5rEJqw _OpD1MF0cEe6xgMAh5rEJqw" version="15.0.0.202201261500">
     <semanticResources>SA.capellafragment</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Ooz9kF0cEe6xgMAh5rEJqw">
@@ -8,7 +8,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='Missions%20Capabilities%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg" href="SA.capellafragment#08d6c3c7-a664-4b77-b072-cf001210389f"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MWztIFuvEe2iJbuWznnyfw" name="[SAB] make coffee" repPath="#_MWuNkFuvEe2iJbuWznnyfw" changeId="5d902eb0-1335-49dc-a09f-03147199c389">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MWztIFuvEe2iJbuWznnyfw" name="[SAB] make coffee" repPath="#_MWuNkFuvEe2iJbuWznnyfw" changeId="06c26b97-b0c7-4c74-8e61-0e811ecf67fc">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.ctx:SystemComponentPkg" href="SA.capellafragment#fd467d8b-b3b3-4459-8c12-83e88f4631a3"/>
       </ownedRepresentationDescriptors>
@@ -535,6 +535,21 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_PDFGJVuvEe2iJbuWznnyfw" fontName="Ubuntu" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PDFGJluvEe2iJbuWznnyfw" x="770" y="90" width="163" height="243"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_l8A-UF0cEe6xgMAh5rEJqw" type="Note" fontName="Sans" description="assumption: coffee is delicious" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l8A-UV0cEe6xgMAh5rEJqw" source="specificStyles">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l8A-Ul0cEe6xgMAh5rEJqw" key="verticalAlignment" value="8"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_l8BlYF0cEe6xgMAh5rEJqw" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_l8BlYV0cEe6xgMAh5rEJqw" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <styles xmi:type="notation:TextStyle" xmi:id="_l8A-U10cEe6xgMAh5rEJqw" textAlignment="Center"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_l8A-VF0cEe6xgMAh5rEJqw"/>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l8A-VV0cEe6xgMAh5rEJqw" x="380" y="360" width="271" height="51"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_MW1iUluvEe2iJbuWznnyfw"/>
         <edges xmi:type="notation:Edge" xmi:id="_Vn9vc1uvEe2iJbuWznnyfw" type="4001" element="_VnRy8FuvEe2iJbuWznnyfw" source="_UpBa8FuvEe2iJbuWznnyfw" target="_Vn9IZluvEe2iJbuWznnyfw">
           <children xmi:type="notation:Node" xmi:id="_Vn9vd1uvEe2iJbuWznnyfw" type="6001">
@@ -855,6 +870,13 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6QIEi1vCEe2iJbuWznnyfw" points="[-5, -5, 35, 35]$[-35, -35, 5, 5]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6QIrkFvCEe2iJbuWznnyfw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6QIrkVvCEe2iJbuWznnyfw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Connector" xmi:id="_o1j-UF0cEe6xgMAh5rEJqw" type="NoteAttachment" source="_Uo--sFuvEe2iJbuWznnyfw" target="_l8A-UF0cEe6xgMAh5rEJqw" lineWidth="1">
+          <styles xmi:type="notation:ArrowStyle" xmi:id="_o1j-UV0cEe6xgMAh5rEJqw"/>
+          <styles xmi:type="notation:LineTypeStyle" xmi:id="_o1j-Ul0cEe6xgMAh5rEJqw"/>
+          <element xsi:nil="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_o1j-U10cEe6xgMAh5rEJqw" points="[-1, 71, 0, -49]$[-1, 120, 0, 0]"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o12SMF0cEe6xgMAh5rEJqw" id="(0.4944649446494465,0.0)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>

@@ -43,6 +43,9 @@
             name="FOP 2"/>
         <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort" id="c87688f6-adc7-45e2-b254-8f22e85fec4b"
             name="FOP 3"/>
+        <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+            id="b123f47c-6dd7-4c95-baca-242ed8bb0a4f" targetElement="org.polarsys.capella.core.data.oa:OperationalActivity OA.capellafragment#0f0f97ea-d252-4211-9923-f0acbbd73d66"
+            sourceElement="#8b0d19df-7446-4c3a-98e7-4a739c974059"/>
       </ownedFunctions>
       <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
           id="f254a221-6364-4beb-92cc-e4f553715c3a" name="provide power">

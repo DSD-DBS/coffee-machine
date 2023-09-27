@@ -10,7 +10,10 @@
   <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
       id="e6920b5b-e863-42a8-a205-86069c8d35af" name="Operational Activities">
     <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-        id="d90e3f89-2407-417a-b01f-2114b32ff329" name="Root Operational Activity"/>
+        id="d90e3f89-2407-417a-b01f-2114b32ff329" name="Root Operational Activity">
+      <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+          id="0f0f97ea-d252-4211-9923-f0acbbd73d66" name="make delicious drinks"/>
+    </ownedOperationalActivities>
   </ownedFunctionPkg>
   <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
       id="f12186d2-47a3-43d9-945f-df30da1e6b61" name="Operational Capabilities"/>
