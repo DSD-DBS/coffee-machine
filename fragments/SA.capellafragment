@@ -32,7 +32,7 @@
             name="FOP 1"/>
       </ownedFunctions>
       <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-          id="8b0d19df-7446-4c3a-98e7-4a739c974059" name="make coffee" availableInStates="#15e28744-1a3b-41ce-a2ee-28fb33ed3bda">
+          id="8b0d19df-7446-4c3a-98e7-4a739c974059" name="make black water" availableInStates="#15e28744-1a3b-41ce-a2ee-28fb33ed3bda">
         <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort" id="9a409efc-75bc-44b5-8888-8abefebc69d0"
             name="FIP 1"/>
         <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort" id="fac29291-c465-4130-a95b-8dbdd8a9a5cf"
