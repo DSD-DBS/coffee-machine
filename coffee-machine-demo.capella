@@ -397,7 +397,7 @@
             <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:CombinedFragment"
                 id="f684e374-a446-44e2-9c00-963af9ece50b" name="combined fragment"
                 start="#5cc250ce-7851-42e9-b692-4d26f7909fa8" finish="#0f6ae238-bd72-47e6-9475-119b89d1b0a9"
-                operator="OPT" referencedOperands="#102de573-b03f-48bb-bbc6-7257b737c279"/>
+                operator="OPT" referencedOperands="#002de573-b03f-48bb-bbc6-7257b737c279"/>
             <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:Execution"
                 id="11e3f572-6e87-4b25-9fb3-e3f22ebea876" start="#32983808-1722-4c26-bb2e-effc670b7c9c"
                 finish="#d619699e-7a2e-47e8-ab37-6311f92cab7b"/>
