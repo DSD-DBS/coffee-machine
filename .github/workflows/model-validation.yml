@@ -1,0 +1,22 @@
+name: validate_capella_model
+
+on: push
+
+jobs:
+  validate_capella_model:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+        - name: Validate the Capella model
+          uses: DSD-DBS/capella-dockerimages/ci-templates/github/model-validation@extend-model-validation
+          with:
+            entry_point: ${{ env.ENTRYPOINT }}
+            capella_version: ${{ env.VERSION }}
+            capella_docker_images_revision: extend-model-validation
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        # Relative entrypoint to .aird file inside repository (starting from the root of the repository).
+        # Example: test/test.aird
+        ENTRYPOINT: "coffee-machine-demo.aird"
+        VERSION: 6.0.0
